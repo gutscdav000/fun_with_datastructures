@@ -161,7 +161,7 @@ public class Dataset extends LinkedList<Digit> {
     if (k < 1 || k > size())
       throw new IndexOutOfBoundsException();
 
-    PriorityQueue<Digit> pq = new PriorityQueue<>((s, t) -> t.compareTo(s));
+    PriorityQueue<Digit> pq = new PriorityQueue<>((s, t) -> s.compareTo(t));
     for (int i = 0; i < size(); i++)
       pq.offer(this.get(i));
 

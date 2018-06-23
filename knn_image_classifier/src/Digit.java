@@ -131,7 +131,6 @@ public class Digit implements Comparable<Digit> {
    * compareTo is implemented so I can refactor this code to leverage a priorityqueue
    */
   public int compareTo(Digit d) {
-
     return this.getDistance() - d.getDistance();
   }
 
@@ -143,6 +142,9 @@ public class Digit implements Comparable<Digit> {
     select = true;
   }
 
+  /**
+   * sets the Label value. (Only used for testing purposes)
+   */
   public void setLabel(Integer label) {
     this.label = label;
   }
