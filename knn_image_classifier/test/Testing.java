@@ -17,6 +17,47 @@ public class  Testing {
     assertEquals(152, three.get(7, 5));
   }
 
+  // sift down test from the gods
+  @Test
+  public void testSiftDown() {
+    PriorityQueue<String> pets = new PriorityQueue<>((s, t) -> s.compareTo(t));
+    Object[] heap;
+    heap = pets.heap;
+    int i = 0;
+    /*
+                  cat
+           gnu           bat
+        rat   pig     cow   dog
+     */
+    for (String pet : new String[] { "cat", "gnu", "bat", "rat", "pig", "cow", "dog" })
+      heap[i++] = pet;
+    pets.n = i;
+    pets.siftDown(0);
+    /*
+                  bat
+           gnu           cat
+        rat   pig     cow   dog
+     */
+    assertEquals("bat", heap[0]);
+    assertEquals("cat", heap[2]);
+    heap[0] = "emu";
+    /*
+                  emu
+           gnu           cat
+        rat   pig     cow   dog
+     */
+    pets.siftDown(0);
+    /*
+                  cat
+           gnu           cow
+        rat   pig     emu   dog
+     */
+    assertEquals("cat", heap[0]);
+    assertEquals("cow", heap[2]);
+    assertEquals("emu", heap[5]);
+  }
+
+
   @Test
   /**
    * When you're ready to run this test, remove the // from the above line.
@@ -33,7 +74,7 @@ public class  Testing {
     assertEquals(3224, ds.get(1).distance(ds.get(2)));
   }
   
-  @Test
+  //@Test
   public void testReadingDatasets() {
     assertEquals(42_000, training.size());
     assertEquals(28_000, unknowns.size());
@@ -44,7 +85,7 @@ public class  Testing {
     assertNotNull(training);
     System.out.println(training.validate(3, 10));  // slow
   }
-  
+
   @Test
   public void biggerNotBetter() {
     /**

@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.lang.Math;
 import java.util.Random;
@@ -67,7 +68,7 @@ public class Dataset extends LinkedList<Digit> {
    *  *********** WABALUBADUBDUB ***********
    */
 
-  public Digit knn(int k, Digit unknown) {
+  /*public Digit knn(int k, Digit unknown) {
     assert k > 0;
     assert k < size();
     neighbors = new Digit[this.size()];
@@ -81,8 +82,8 @@ public class Dataset extends LinkedList<Digit> {
     }
     // heapify to organize min heap
     heapify(neighbors);
-    /* find the (MAJORITY), "q.
-     * */
+    *//* find the (MAJORITY), "q.
+     * *//*
     int last = neighbors.length - 1;
     Digit[] kDigits = new Digit[k];
     for(int i = 0; i < Constants.K; i++) {
@@ -93,9 +94,9 @@ public class Dataset extends LinkedList<Digit> {
         kDigits[i] = hold;
     }
          //////////***************≈
-    /*
+    *//*
      *  use CountKs to find the "Majority"
-     */
+     *//*
 
     // read info into histogram array to compare counts of labels
     boolean found;
@@ -134,6 +135,28 @@ public class Dataset extends LinkedList<Digit> {
 
 
     return kDigits[0];
+  }*/
+
+
+    /**  NOTES:
+     * - make sure it's a
+     *
+     */
+  public Digit knn(int k, Digit unknown) {
+
+      if (k < 1 || k > size())
+          throw new IndexOutOfBoundsException();
+
+      PriorityQueue<Digit> pq = new PriorityQueue<>((s, t) -> t.compareTo(s));
+      for (int i = 0; i < size(); i++)
+          pq.offer(this.get(i));
+
+      // needs a little refactoring
+      // don't return kth largest return kth nearest neighbor
+      for (int i = 0; i < k - 1; i++)
+          pq.poll();
+      return pq.poll();
+
   }
 
   /********************************************************
@@ -141,7 +164,7 @@ public class Dataset extends LinkedList<Digit> {
      * Rearranges the elements of a so that they form a max-heap.
      */
 
-    public static void heapify(Digit[] a) {
+    /*public static void heapify(Digit[] a) {
         int n = a.length;
         int last = n - 1;
 
@@ -152,14 +175,14 @@ public class Dataset extends LinkedList<Digit> {
             //System.out.println(Integer.toString(i));
             i--;
         }
-    }
+    }*/
 
     /**
      * Restores the ordering property at node p so that elements from
      * 0 to last, inclusive, in the array a form a max-heap.
      */
 
-    public static void siftDown(Digit[] a, int p, int last) {
+    /*public static void siftDown(Digit[] a, int p, int last) {
         int left = leftChild(p), right = rightChild(p),c = left, n = a.length/2;
 
 
@@ -183,7 +206,7 @@ public class Dataset extends LinkedList<Digit> {
             }
         }
 
-    }
+    }*/
 
 
 
