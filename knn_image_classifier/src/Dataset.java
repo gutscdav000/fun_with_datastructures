@@ -1,4 +1,5 @@
 import com.sun.xml.internal.bind.v2.runtime.reflect.opt.Const;
+import javafx.util.Pair;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -34,7 +35,6 @@ public class Dataset extends LinkedList<Digit> {
 
   public Dataset(String filename) {
     load(filename);
-    //neighbors = new Digit[this.size()];
   }
 
 
@@ -137,6 +137,20 @@ public class Dataset extends LinkedList<Digit> {
     return kDigits[0];
   }*/
 
+  class Pairs {
+    Integer key;
+    Integer value;
+
+    Pairs(int k, int v) {
+      key = k;
+      value = v;
+    }
+
+    public int getKey() {return key;}
+    public int getValue() {return value;}
+
+    public void setValue(int v) {value = v;}
+  }
 
     /**  NOTES:
      * - make sure it's a
@@ -144,19 +158,67 @@ public class Dataset extends LinkedList<Digit> {
      */
   public Digit knn(int k, Digit unknown) {
 
-      if (k < 1 || k > size())
-          throw new IndexOutOfBoundsException();
+    if (k < 1 || k > size())
+      throw new IndexOutOfBoundsException();
 
-      PriorityQueue<Digit> pq = new PriorityQueue<>((s, t) -> t.compareTo(s));
-      for (int i = 0; i < size(); i++)
-          pq.offer(this.get(i));
+    PriorityQueue<Digit> pq = new PriorityQueue<>((s, t) -> t.compareTo(s));
+    for (int i = 0; i < size(); i++)
+      pq.offer(this.get(i));
 
-      // needs a little refactoring
-      // don't return kth largest return kth nearest neighbor
-      for (int i = 0; i < k - 1; i++)
-          pq.poll();
-      return pq.poll();
+    // needs a little refactoring
+    Digit[] kValues = new Digit[k];
+    // don't return kth largest return kth nearest neighbor
+    for (int i = 0; i < k; i++)
+      kValues[i] = pq.poll();
 
+    return mode(k, kValues);
+
+  }
+
+  /**
+   * a function which takes an array of Digits and returns the mode digit
+   * @param k K- largest value
+   * @param kValues - array of Kth - Largest Values
+   * @return the digit corresponding with the MODE of the array
+   */
+  public Digit mode(int k, Digit[] kValues) {
+
+    // maps keys: [0,9] to values: number of occurences
+    Pairs[] numbers = new Pairs[10];
+    for(int i = 0; i < 10; i++)
+      numbers[i] = new Pairs(i, 0);
+
+
+    // find the count of digit labels
+    Pairs curPair;
+    for(int i = 0; i < kValues.length; i++) {
+      // skip this value if it's uncalssified
+      if(kValues[i].getLabel() == -1) {
+        continue;
+      } else {
+        curPair = numbers[kValues[i].getLabel()];
+        curPair.setValue(curPair.getValue() + 1);
+      }
+    }
+
+    //find the Mode label
+    Integer label = numbers[0].getKey();
+    Integer modeValue = numbers[0].getValue();
+    for(int i = 1; i < 10; i++) {
+      if(numbers[i].getValue() > modeValue) {
+        label = numbers[i].getKey();
+        modeValue = numbers[i].getValue();
+      }
+    }
+
+    //return a digit with the mode label
+    for(int i = 0; i < kValues.length; i++) {
+      if(label.equals(kValues[i].getLabel()))
+        return kValues[i];
+    }
+
+    // this should never be reached
+    return kValues[0];
   }
 
   /********************************************************

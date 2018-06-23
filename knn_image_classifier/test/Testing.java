@@ -1,6 +1,8 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+import javax.xml.crypto.Data;
+
 public class  Testing {
   
   private static Dataset training = new Dataset(Constants.TRAINING_DATA);
@@ -15,6 +17,18 @@ public class  Testing {
     assertEquals(3, three.getLabel());
     assertEquals(25, three.get(6, 5));
     assertEquals(152, three.get(7, 5));
+  }
+
+  @Test
+  public void testModeMethod() {
+    Dataset ds = new Dataset();
+    Digit[] test = {new Digit(), new Digit(), new Digit()};
+    test[0].setLabel(0);
+    test[1].setLabel(0);
+    test[2].setLabel(5);
+
+    Digit modeVal = ds.mode(2, test);
+    assert modeVal.equals(test[0]) || modeVal.equals(test[1]);
   }
 
   // sift down test from the gods

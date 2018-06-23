@@ -12,16 +12,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Digit.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Digit.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Digit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="121" column="8" selection-start-line="121" selection-start-column="8" selection-end-line="121" selection-end-column="8" />
+            <state relative-caret-position="1993">
+              <caret line="146" column="23" selection-start-line="146" selection-start-column="23" selection-end-line="146" selection-end-column="23" />
               <folding>
                 <element signature="e#3677#3678#0" expanded="true" />
                 <element signature="e#3700#3701#0" expanded="true" />
-                <element signature="e#3768#3769#0" expanded="true" />
-                <element signature="e#3792#3793#0" expanded="true" />
+                <element signature="e#3574#3575#0" expanded="true" />
+                <element signature="e#3602#3603#0" expanded="true" />
+                <element signature="e#3640#3641#0" expanded="true" />
+                <element signature="e#3664#3665#0" expanded="true" />
                 <element signature="e#3884#3885#0" expanded="true" />
                 <element signature="e#3907#3908#0" expanded="true" />
                 <element signature="e#5552#5553#0" expanded="true" />
@@ -31,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Testing.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Testing.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/Testing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="70" column="50" lean-forward="true" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="50" />
+            <state relative-caret-position="1440">
+              <caret line="99" selection-start-line="99" selection-end-line="99" />
             </state>
           </provider>
         </entry>
@@ -43,10 +45,20 @@
       <file leaf-file-name="Dataset.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Dataset.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1961">
-              <caret line="154" column="61" lean-forward="true" selection-start-line="154" selection-start-column="61" selection-end-line="154" selection-end-column="61" />
+            <state relative-caret-position="286">
+              <caret line="170" column="25" selection-start-line="170" selection-start-column="25" selection-end-line="170" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#970#971#0" expanded="true" />
+                <element signature="e#994#995#0" expanded="true" />
+                <element signature="e#7829#7830#0" expanded="true" />
+                <element signature="e#7861#7862#0" expanded="true" />
+                <element signature="e#7906#7907#0" expanded="true" />
+                <element signature="e#7945#7946#0" expanded="true" />
+                <element signature="e#7986#7987#0" expanded="true" />
+                <element signature="e#8020#8021#0" expanded="true" />
+                <element signature="e#8217#8218#0" expanded="true" />
+                <element signature="e#8243#8244#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,6 +81,7 @@
       <find>neighbors</find>
       <find>load</find>
       <find>compareTo</find>
+      <find>classify</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -79,9 +92,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/Constants.java" />
         <option value="$PROJECT_DIR$/src/CountKs.java" />
-        <option value="$PROJECT_DIR$/src/Dataset.java" />
-        <option value="$PROJECT_DIR$/test/Testing.java" />
         <option value="$PROJECT_DIR$/src/Digit.java" />
+        <option value="$PROJECT_DIR$/test/Testing.java" />
+        <option value="$PROJECT_DIR$/src/Dataset.java" />
       </list>
     </option>
   </component>
@@ -153,17 +166,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Testing.readTrainingData">
+  <component name="RunManager" selected="JUnit.Testing">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
     <configuration name="Dataset" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Dataset" />
-      <module name="p1" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="p1" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -187,13 +195,13 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="Testing.readTrainingData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Testing.classifyUnknowns" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="p1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Testing" />
-      <option name="METHOD_NAME" value="readTrainingData" />
+      <option name="METHOD_NAME" value="classifyUnknowns" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -204,13 +212,30 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="Testing.testSiftDown" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Testing.quickValidation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="p1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Testing" />
-      <option name="METHOD_NAME" value="testSiftDown" />
+      <option name="METHOD_NAME" value="quickValidation" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="Testing.testModeMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="p1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Testing" />
+      <option name="METHOD_NAME" value="testModeMethod" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -273,19 +298,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.Dataset" />
       <item itemvalue="JUnit.Testing" />
-      <item itemvalue="JUnit.Testing.testSiftDown" />
-      <item itemvalue="JUnit.Testing.readTrainingData" />
+      <item itemvalue="JUnit.Testing.classifyUnknowns" />
+      <item itemvalue="Application.Dataset" />
+      <item itemvalue="JUnit.Testing.testModeMethod" />
+      <item itemvalue="JUnit.Testing.quickValidation" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Testing.readTrainingData" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.Testing" />
-        <item itemvalue="JUnit.Testing.testSiftDown" />
+        <item itemvalue="JUnit.Testing.quickValidation" />
+        <item itemvalue="JUnit.Testing.testModeMethod" />
         <item itemvalue="Application.Dataset" />
+        <item itemvalue="JUnit.Testing.classifyUnknowns" />
       </list>
     </recent_temporary>
   </component>
@@ -318,44 +343,44 @@
       <workItem from="1529521326021" duration="598000" />
       <workItem from="1529707651092" duration="9000" />
       <workItem from="1529708739487" duration="19000" />
-      <workItem from="1529751360977" duration="1250000" />
+      <workItem from="1529751360977" duration="7535000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Testing - 2018.06.22 at 19h 25m 37s.xml">
+    <history-entry file="Testing_testModeMethod - 2018.06.23 at 08h 40m 28s.xml">
+      <configuration name="Testing.testModeMethod" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Testing_testModeMethod - 2018.06.23 at 08h 54m 59s.xml">
+      <configuration name="Testing.testModeMethod" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Testing_testModeMethod - 2018.06.23 at 08h 57m 00s.xml">
+      <configuration name="Testing.testModeMethod" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Testing_testModeMethod - 2018.06.23 at 09h 04m 27s.xml">
+      <configuration name="Testing.testModeMethod" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Testing - 2018.06.23 at 09h 05m 25s.xml">
       <configuration name="Testing" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Testing - 2018.06.22 at 20h 28m 39s.xml">
+    <history-entry file="Testing - 2018.06.23 at 09h 06m 39s.xml">
       <configuration name="Testing" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Testing_readTrainingData - 2018.06.22 at 20h 30m 06s.xml">
-      <configuration name="Testing.readTrainingData" configurationId="JUnit" />
+    <history-entry file="Testing - 2018.06.23 at 09h 18m 01s.xml">
+      <configuration name="Testing" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Testing_readTrainingData - 2018.06.22 at 20h 30m 51s.xml">
-      <configuration name="Testing.readTrainingData" configurationId="JUnit" />
+    <history-entry file="Testing_quickValidation - 2018.06.23 at 09h 21m 05s.xml">
+      <configuration name="Testing.quickValidation" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Testing_readTrainingData - 2018.06.22 at 20h 31m 24s.xml">
-      <configuration name="Testing.readTrainingData" configurationId="JUnit" />
+    <history-entry file="Testing_testModeMethod - 2018.06.23 at 09h 23m 00s.xml">
+      <configuration name="Testing.testModeMethod" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Testing_readTrainingData - 2018.06.23 at 06h 58m 42s.xml">
-      <configuration name="Testing.readTrainingData" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Testing_readTrainingData - 2018.06.23 at 06h 59m 35s.xml">
-      <configuration name="Testing.readTrainingData" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Testing_readTrainingData - 2018.06.23 at 07h 03m 03s.xml">
-      <configuration name="Testing.readTrainingData" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Testing_readTrainingData - 2018.06.23 at 07h 03m 22s.xml">
-      <configuration name="Testing.readTrainingData" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Testing_readTrainingData - 2018.06.23 at 07h 17m 55s.xml">
-      <configuration name="Testing.readTrainingData" configurationId="JUnit" />
+    <history-entry file="Testing - 2018.06.23 at 09h 24m 01s.xml">
+      <configuration name="Testing" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48993000" />
+    <option name="totallyTimeSpent" value="55278000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -371,7 +396,7 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4763889" visible="true" weight="0.375" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4763889" weight="0.375" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49722221" weight="0.3282353" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -382,7 +407,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49722221" weight="0.3985849" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49722221" visible="true" weight="0.3985849" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -414,19 +439,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Dataset.java</url>
-          <line>193</line>
+          <line>255</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/test/Testing.java</url>
-          <line>65</line>
+          <line>79</line>
           <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/test/Testing.java</url>
-          <line>71</line>
+          <line>85</line>
           <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
@@ -436,8 +461,32 @@
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/Testing.java</url>
+          <line>122</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Dataset.java</url>
+          <line>193</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/Testing.java</url>
+          <line>98</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Dataset.java</url>
+          <line>168</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="20" />
+      <option name="time" value="25" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -447,6 +496,16 @@
           <caret line="108" column="36" lean-forward="true" selection-start-line="108" selection-start-column="36" selection-end-line="108" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#7829#7830#0" expanded="true" />
+            <element signature="e#7861#7862#0" expanded="true" />
+            <element signature="e#7906#7907#0" expanded="true" />
+            <element signature="e#7945#7946#0" expanded="true" />
+            <element signature="e#7986#7987#0" expanded="true" />
+            <element signature="e#8020#8021#0" expanded="true" />
+            <element signature="e#8217#8218#0" expanded="true" />
+            <element signature="e#8243#8244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -478,6 +537,16 @@
           <caret line="166" column="88" selection-start-line="166" selection-start-column="88" selection-end-line="166" selection-end-column="88" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#7829#7830#0" expanded="true" />
+            <element signature="e#7861#7862#0" expanded="true" />
+            <element signature="e#7906#7907#0" expanded="true" />
+            <element signature="e#7945#7946#0" expanded="true" />
+            <element signature="e#7986#7987#0" expanded="true" />
+            <element signature="e#8020#8021#0" expanded="true" />
+            <element signature="e#8217#8218#0" expanded="true" />
+            <element signature="e#8243#8244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -509,6 +578,16 @@
           <caret line="166" column="88" selection-start-line="166" selection-start-column="88" selection-end-line="166" selection-end-column="88" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#7829#7830#0" expanded="true" />
+            <element signature="e#7861#7862#0" expanded="true" />
+            <element signature="e#7906#7907#0" expanded="true" />
+            <element signature="e#7945#7946#0" expanded="true" />
+            <element signature="e#7986#7987#0" expanded="true" />
+            <element signature="e#8020#8021#0" expanded="true" />
+            <element signature="e#8217#8218#0" expanded="true" />
+            <element signature="e#8243#8244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -540,6 +619,16 @@
           <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#7829#7830#0" expanded="true" />
+            <element signature="e#7861#7862#0" expanded="true" />
+            <element signature="e#7906#7907#0" expanded="true" />
+            <element signature="e#7945#7946#0" expanded="true" />
+            <element signature="e#7986#7987#0" expanded="true" />
+            <element signature="e#8020#8021#0" expanded="true" />
+            <element signature="e#8217#8218#0" expanded="true" />
+            <element signature="e#8243#8244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -564,6 +653,16 @@
           <caret line="85" column="35" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#7829#7830#0" expanded="true" />
+            <element signature="e#7861#7862#0" expanded="true" />
+            <element signature="e#7906#7907#0" expanded="true" />
+            <element signature="e#7945#7946#0" expanded="true" />
+            <element signature="e#7986#7987#0" expanded="true" />
+            <element signature="e#8020#8021#0" expanded="true" />
+            <element signature="e#8217#8218#0" expanded="true" />
+            <element signature="e#8243#8244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -581,6 +680,16 @@
           <caret line="84" column="36" lean-forward="true" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#7829#7830#0" expanded="true" />
+            <element signature="e#7861#7862#0" expanded="true" />
+            <element signature="e#7906#7907#0" expanded="true" />
+            <element signature="e#7945#7946#0" expanded="true" />
+            <element signature="e#7986#7987#0" expanded="true" />
+            <element signature="e#8020#8021#0" expanded="true" />
+            <element signature="e#8217#8218#0" expanded="true" />
+            <element signature="e#8243#8244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -612,6 +721,16 @@
           <caret line="119" selection-start-line="119" selection-end-line="119" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#7829#7830#0" expanded="true" />
+            <element signature="e#7861#7862#0" expanded="true" />
+            <element signature="e#7906#7907#0" expanded="true" />
+            <element signature="e#7945#7946#0" expanded="true" />
+            <element signature="e#7986#7987#0" expanded="true" />
+            <element signature="e#8020#8021#0" expanded="true" />
+            <element signature="e#8217#8218#0" expanded="true" />
+            <element signature="e#8243#8244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -629,6 +748,16 @@
           <caret line="83" column="30" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#7829#7830#0" expanded="true" />
+            <element signature="e#7861#7862#0" expanded="true" />
+            <element signature="e#7906#7907#0" expanded="true" />
+            <element signature="e#7945#7946#0" expanded="true" />
+            <element signature="e#7986#7987#0" expanded="true" />
+            <element signature="e#8020#8021#0" expanded="true" />
+            <element signature="e#8217#8218#0" expanded="true" />
+            <element signature="e#8243#8244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -660,6 +789,16 @@
           <caret line="83" column="30" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#7829#7830#0" expanded="true" />
+            <element signature="e#7861#7862#0" expanded="true" />
+            <element signature="e#7906#7907#0" expanded="true" />
+            <element signature="e#7945#7946#0" expanded="true" />
+            <element signature="e#7986#7987#0" expanded="true" />
+            <element signature="e#8020#8021#0" expanded="true" />
+            <element signature="e#8217#8218#0" expanded="true" />
+            <element signature="e#8243#8244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -684,6 +823,16 @@
           <caret line="79" column="19" lean-forward="true" selection-start-line="79" selection-start-column="19" selection-end-line="79" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#7829#7830#0" expanded="true" />
+            <element signature="e#7861#7862#0" expanded="true" />
+            <element signature="e#7906#7907#0" expanded="true" />
+            <element signature="e#7945#7946#0" expanded="true" />
+            <element signature="e#7986#7987#0" expanded="true" />
+            <element signature="e#8020#8021#0" expanded="true" />
+            <element signature="e#8217#8218#0" expanded="true" />
+            <element signature="e#8243#8244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -701,6 +850,16 @@
           <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#7829#7830#0" expanded="true" />
+            <element signature="e#7861#7862#0" expanded="true" />
+            <element signature="e#7906#7907#0" expanded="true" />
+            <element signature="e#7945#7946#0" expanded="true" />
+            <element signature="e#7986#7987#0" expanded="true" />
+            <element signature="e#8020#8021#0" expanded="true" />
+            <element signature="e#8217#8218#0" expanded="true" />
+            <element signature="e#8243#8244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -725,6 +884,16 @@
           <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#7829#7830#0" expanded="true" />
+            <element signature="e#7861#7862#0" expanded="true" />
+            <element signature="e#7906#7907#0" expanded="true" />
+            <element signature="e#7945#7946#0" expanded="true" />
+            <element signature="e#7986#7987#0" expanded="true" />
+            <element signature="e#8020#8021#0" expanded="true" />
+            <element signature="e#8217#8218#0" expanded="true" />
+            <element signature="e#8243#8244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -742,6 +911,16 @@
           <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#7829#7830#0" expanded="true" />
+            <element signature="e#7861#7862#0" expanded="true" />
+            <element signature="e#7906#7907#0" expanded="true" />
+            <element signature="e#7945#7946#0" expanded="true" />
+            <element signature="e#7986#7987#0" expanded="true" />
+            <element signature="e#8020#8021#0" expanded="true" />
+            <element signature="e#8217#8218#0" expanded="true" />
+            <element signature="e#8243#8244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -796,47 +975,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/tiny.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/Testing.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="70" column="50" lean-forward="true" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dataset.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1961">
-          <caret line="154" column="61" lean-forward="true" selection-start-line="154" selection-start-column="61" selection-end-line="154" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="195">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Digit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="121" column="8" selection-start-line="121" selection-start-column="8" selection-end-line="121" selection-end-column="8" />
+        <state relative-caret-position="1993">
+          <caret line="146" column="23" selection-start-line="146" selection-start-column="23" selection-end-line="146" selection-end-column="23" />
           <folding>
             <element signature="e#3677#3678#0" expanded="true" />
             <element signature="e#3700#3701#0" expanded="true" />
-            <element signature="e#3768#3769#0" expanded="true" />
-            <element signature="e#3792#3793#0" expanded="true" />
+            <element signature="e#3574#3575#0" expanded="true" />
+            <element signature="e#3602#3603#0" expanded="true" />
+            <element signature="e#3640#3641#0" expanded="true" />
+            <element signature="e#3664#3665#0" expanded="true" />
             <element signature="e#3884#3885#0" expanded="true" />
             <element signature="e#3907#3908#0" expanded="true" />
             <element signature="e#5552#5553#0" expanded="true" />
             <element signature="e#5589#5590#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dataset.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="170" column="25" selection-start-line="170" selection-start-column="25" selection-end-line="170" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#7829#7830#0" expanded="true" />
+            <element signature="e#7861#7862#0" expanded="true" />
+            <element signature="e#7906#7907#0" expanded="true" />
+            <element signature="e#7945#7946#0" expanded="true" />
+            <element signature="e#7986#7987#0" expanded="true" />
+            <element signature="e#8020#8021#0" expanded="true" />
+            <element signature="e#8217#8218#0" expanded="true" />
+            <element signature="e#8243#8244#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Testing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="99" selection-start-line="99" selection-end-line="99" />
         </state>
       </provider>
     </entry>

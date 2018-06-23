@@ -119,7 +119,7 @@ public class Digit implements Comparable<Digit> {
 
     for (int i = 0; i < Constants.DIM; i++) {
       for (int j = 0; j < Constants.DIM; j++) {
-        
+
         sumVal += Math.pow(this.image[i][j] - that.image[i][j], 2);
       }
     }
@@ -141,6 +141,10 @@ public class Digit implements Comparable<Digit> {
 
   public void select() {
     select = true;
+  }
+
+  public void setLabel(Integer label) {
+    this.label = label;
   }
 
   /**
