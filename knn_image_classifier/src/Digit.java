@@ -8,7 +8,7 @@ import java.lang.Integer;
  * itself and another Digit.
  */
 
-public class Digit {
+public class Digit implements Comparable<Digit> {
   private static int UNCLASSIFIED = -1;
 
   private int label = UNCLASSIFIED;
@@ -119,11 +119,19 @@ public class Digit {
 
     for (int i = 0; i < Constants.DIM; i++) {
       for (int j = 0; j < Constants.DIM; j++) {
-        System.out.println(Integer.toString(this.image[i][j]) + ", "+ Integer.toString(that.image[i][j]));
-        sumVal += Math.pow(this.image[i][j],2) - Math.pow(that.image[i][j], 2);
+
+        sumVal += Math.pow(this.image[i][j] - that.image[i][j], 2);
       }
     }
+
     return (int)Math.sqrt(sumVal);
+  }
+
+  /**
+   * compareTo is implemented so I can refactor this code to leverage a priorityqueue
+   */
+  public int compareTo(Digit d) {
+    return this.getDistance() - d.getDistance();
   }
 
   /**
@@ -132,6 +140,13 @@ public class Digit {
 
   public void select() {
     select = true;
+  }
+
+  /**
+   * sets the Label value. (Only used for testing purposes)
+   */
+  public void setLabel(Integer label) {
+    this.label = label;
   }
 
   /**

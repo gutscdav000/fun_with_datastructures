@@ -1,6 +1,8 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+import javax.xml.crypto.Data;
+
 public class  Testing {
   
   private static Dataset training = new Dataset(Constants.TRAINING_DATA);
@@ -18,6 +20,59 @@ public class  Testing {
   }
 
   @Test
+  public void testModeMethod() {
+    Dataset ds = new Dataset();
+    Digit[] test = {new Digit(), new Digit(), new Digit()};
+    test[0].setLabel(0);
+    test[1].setLabel(0);
+    test[2].setLabel(5);
+
+    Digit modeVal = ds.mode(2, test);
+    assert modeVal.equals(test[0]) || modeVal.equals(test[1]);
+  }
+
+  // sift down test from the gods
+  @Test
+  public void testSiftDown() {
+    PriorityQueue<String> pets = new PriorityQueue<>((s, t) -> s.compareTo(t));
+    Object[] heap;
+    heap = pets.heap;
+    int i = 0;
+    /*
+                  cat
+           gnu           bat
+        rat   pig     cow   dog
+     */
+    for (String pet : new String[] { "cat", "gnu", "bat", "rat", "pig", "cow", "dog" })
+      heap[i++] = pet;
+    pets.n = i;
+    pets.siftDown(0);
+    /*
+                  bat
+           gnu           cat
+        rat   pig     cow   dog
+     */
+    assertEquals("bat", heap[0]);
+    assertEquals("cat", heap[2]);
+    heap[0] = "emu";
+    /*
+                  emu
+           gnu           cat
+        rat   pig     cow   dog
+     */
+    pets.siftDown(0);
+    /*
+                  cat
+           gnu           cow
+        rat   pig     emu   dog
+     */
+    assertEquals("cat", heap[0]);
+    assertEquals("cow", heap[2]);
+    assertEquals("emu", heap[5]);
+  }
+
+
+  @Test
   /**
    * When you're ready to run this test, remove the // from the above line.
    */
@@ -33,7 +88,7 @@ public class  Testing {
     assertEquals(3224, ds.get(1).distance(ds.get(2)));
   }
   
-  @Test
+  //@Test
   public void testReadingDatasets() {
     assertEquals(42_000, training.size());
     assertEquals(28_000, unknowns.size());
@@ -44,7 +99,7 @@ public class  Testing {
     assertNotNull(training);
     System.out.println(training.validate(3, 10));  // slow
   }
-  
+
   @Test
   public void biggerNotBetter() {
     /**
