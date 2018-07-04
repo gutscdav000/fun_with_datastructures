@@ -1,10 +1,13 @@
-/** 
- * Here's a starter file to help get you going on Problem 1.6 in Weiss,
- * which is the first problem on hw1.
+/**
  *
- * @author <put your name here>
+ * @author David Gutsch
  */
+import javax.print.DocFlavor;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.lang.String;
+import java.util.LinkedList;
 
 public class Permutations {
 
@@ -13,8 +16,8 @@ public class Permutations {
    */
 
   // testing fields
-  public static String[] permutationTest = new String[24];
-  public static int permutationIndex = 0;
+  private static LinkedList<String> permutationTest = new LinkedList();
+  //public static int permutationIndex = 0;
 
   private static int factorial(int fac) {
     return factorialHelper(fac, fac);
@@ -28,8 +31,10 @@ public class Permutations {
 
   }
 
-  public static void permute(String str) {
+  public static LinkedList<String> permute(String str) {
     permute(str.toCharArray(), 0, str.length());
+
+    return permutationTest;
   }
   
   /**
@@ -56,9 +61,11 @@ public class Permutations {
       if(low == high - 1) {
           String tmp = new String(str);
           System.out.println(tmp);
-          //FOR TESTING PURPOSES
-          permutationTest[permutationIndex] = tmp;
-          ++permutationIndex;
+
+          //append to list
+          permutationTest.add(tmp);
+          //++permutationIndex;
+
           return;
       }
 
@@ -86,44 +93,26 @@ public class Permutations {
 
   }
 
-  /*
-        circle back to this attempt if nothing else works
-  public static void permute(char[] str, int low, int high) {
-      char curChar;
-      if (low == high) return;
 
-      for(int i = low; i != high; ++i) {
-          str[i] = curChar;
-          System.out.print("a");
-          for(int j = i + 1;;)
-
-          permute(str, low + 1, high)
-      }
-  }*/
-
-
-  /*
-  private static void permuteHelper(char[] str, int low, int high, int iter, int index) {
-    if (factorial(high - low) == iter) return;
-
-    System.out.println(Integer.toString(iter) + ",  " + new String(str));
-    char hold = str[low];
-    str[low] = str[index];
-    str[index] = hold;
-
-    permuteHelper(str, low, high, ++iter, ++index == high ? low + 1: index);
-  }*/
 
 
   
   public static void main(String[] args) {
 
-
-    permute("abcd");
+    // permutation test
+    LinkedList<String> test = permute("abcd");
 
     String[] test1 = new String[] {"abcd", "abdc", "acbd", "acdb", "adcb", "adbc", "bacd", "badc", "bcad", "bcda", "bdca", "bdac", "cbad","cbda", "cabd", "cadb", "cdab", "cdba", "dbca", "dbac", "dcba", "dcab", "dacb", "dabc"};
 
-    assert test1.equals(permutationTest);
+      String[] permArr = new String[permutationTest.size()];
+      int i = 0;
+
+    System.out.println("break");
+    for(String str : test) {
+        System.out.println(str);
+    }
+
+    //assert test1.equals(permArr);
 
     /* Expected output:
        abcd
@@ -151,10 +140,9 @@ public class Permutations {
        dacb
        dabc
      */
-
-
-
       System.out.println("Permutation test passed. Woooh!");
+
+
 
   }  
 }
