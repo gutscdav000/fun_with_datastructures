@@ -11,7 +11,7 @@ public class Main {
         BufferedWriter buffer = null;
 
 
-       /* try {
+        try {
             buffer = new BufferedWriter(new FileWriter("back_wordlist1.txt"));
 
             for (String passwd: Permutations.permute("06basebrad")) {
@@ -46,10 +46,9 @@ public class Main {
         } catch (IOException e) {
             System.out.println("Error code:\t" + e.toString());
         }
-*/
         buffer = null;
 
-        char[] specialChars = {'!', '@', '$', '#', '%', '&', '*', '?', };
+        /*char[] specialChars = {'!', '@', '$', '#', '%', '&', '*', '?', };
         Integer fileNum = 3;
 
 
@@ -61,7 +60,7 @@ public class Main {
 
                 System.out.println("back_wordlist" + fileNum.toString() + ".txt");
                 fileNum++;
-                String perm = "06basebrAD" + specialChars[i];
+                String perm = "06basebrad" + specialChars[i];
                 System.out.println(perm);
 
                 for (String passwd : Permutations.permute(perm)) {
@@ -77,7 +76,7 @@ public class Main {
             } catch (IOException e) {
                 System.out.println("Error code:\t" + e.toString());
             }
-        }
+        }*/
     }
 
 }

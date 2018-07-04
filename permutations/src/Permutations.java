@@ -60,7 +60,7 @@ public class Permutations {
       //high = high - 1;  // makes high an index
       if(low == high - 1) {
           String tmp = new String(str);
-          System.out.println(tmp);
+          //System.out.println(tmp);
 
           //append to list
           permutationTest.add(tmp);
