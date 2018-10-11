@@ -13,5 +13,7 @@
 - ## permutations
 
 - ## twitter bot project
+  This project was one of my favorites where Twitter's API was used in conjunction with string matching algorithms to efficiently search twitter data for a preselected string. In addition it contains the functionality to see what people have been tweeting about given a subject string, and can return the most popular words tweeted by someone with a given twitter handle. The string matching algorithms were a naive algorithm, Knuth-Morris-Pratt (KMP), and Boyer-Moore.  The niave algorithm has no optimizations. The KMP algorithm constructs a finite state automata of a search string to be found in other strings and has a worstcase linear run time. Finally the Boyer-Moore algorithm uses a nifty shift routine for substrings that are known not to match and the Galil rule which skips substring comparisons that are known to match creating a linear runtime in the worst case and sublinear in the majority of cases. In this project I found that KMP runs well on strings with a smaller alphabet, where Boyer-Moore surpasses KMP in key comparisons when the strings are longer and the alphabett size is larger. For example KMP is much better at comparing binary and hexidecimal strings, while Boyer-Moore is much better at comparing ASCII strings.
 
 - ## wire routing project
+  
