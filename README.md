@@ -8,6 +8,7 @@
   This project is an image classfier that uses the MNIST dataset of handwritten digits to train itself to classify handwritten numeric values. It employes a K-nearest neighbor algorithm where the majority classification of the K most similar images are used to select the image's value. This particular algorithm uses euclidean distance of the raw pixel intensities for differentiating images and it uses a heap for efficiency.
 
 - ## palatte similarity
+  This project uses a hashmap to compare the RGB pixel colors in an image to that of another. This is done at various levels of quantization that can be modified by the sliding bar provided by the GUI anywhere from 8 bits per RGB channel all the way down to one. Additionally when you click and hold your cursor on a particular pixel on the screen it will highlight all of the other matching pixels on both images using the xray effect. The hash table itself has been implemented to be self-adjusting to move the previously fetched list item to the head of the list for each array index within the table, and it uses chaining as the collision resolution strategy.
 
 - ## permutations
 
