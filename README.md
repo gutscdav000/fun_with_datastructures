@@ -21,3 +21,6 @@
   
   This was my overall favorite project from my datastructures class for many reasons. Firstly, it was so open ended that it gave you so much freedom to implement and optimize. One could choose to use Djikstra's algorithm, the breadth first search algorithm I used, or if you have some AI background modify BFS and use A* instead. Additionally, we used so many of the data structures to implement the wire routing algorithm and represent the board that it predicated a high degree of fluency with the structures we learned during the semester, as well as their associated runtimes due to the freedom to optimize. In my project I used my DoublyLinkedList structure, PriorityQueue, HashMap, and a BFS algorithm which really encapsulated the vast majority of our semester excluding string matching algorithms and sorting algorithms. Giving us the freedom to optimize this algorithm for both runtime and wirelength led to an iterative process that made us discover nuances of the implementation such as the fact that euclidian distance is better for organizing which direction to move when optimizing one wire, but manhattan is better when determining which wire to lay first. *If you are interested in a deeper explanation of how I attacked this project there is a report I wrote in the Driver.java class.*
   
+  
+  
+  
